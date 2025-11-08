@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditi Health Tracker - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <h1 id="dashboardTitle">My Health & Habit Dashboard</h1>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="profile-section">
+      <h2 id="welcomeText">Welcome back, Aditi 👋</h2>
+      <p id="quoteText">“Small daily steps lead to big health wins 🌿”</p>
+    </section>
+
+    <section class="habits-section">
+      <h3 id="habitTitle">Your Habits / आदतें</h3>
+      <div class="habit-input">
+        <input type="text" id="habitInput" placeholder="Add a new habit..." />
+        <button id="addHabitBtn">Add</button>
+      </div>
+      <ul id="habitList" class="habit-list"></ul>
+    </section>
+
+    <section class="progress-section">
+      <h3 id="progressTitle">Progress / प्रगति</h3>
+      <div class="progress-container">
+        <div class="progress-ring">
+          <div class="progress-circle" id="progressCircle"></div>
+          <span id="progressPercent">0%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="charts-section">
+      <div class="chart-card">
+        <h3 id="barTitle">Weekly Exercise Tracker</h3>
+        <canvas id="exerciseChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3 id="pieTitle">Health Stats Overview</h3>
+        <canvas id="healthChart"></canvas>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <p>Developed by <strong>Aditi Sinha</strong> as a professional wellness dashboard project 💚</p>
+    </section>
+  </main>
+
+  <div id="celebration" class="celebration hidden">
+    🎉 Hurray, Aditi! You've completed your tasks for today 💪
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

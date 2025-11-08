@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditi Health Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-body">
+  <div class="welcome-container">
+    <h1 class="welcome-title">Welcome, <span class="highlight">Aditi Sinha 🌸</span></h1>
+    <p class="welcome-subtitle">Your journey to better health begins here</p>
+    <button id="enterDashboardBtn" class="enter-btn">Enter Dashboard</button>
+  </div>
+
+  <audio id="enterSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7bdbd09d54.mp3?filename=correct-2-46134.mp3" preload="auto"></audio>
+
+  <script>
+    const enterBtn = document.getElementById('enterDashboardBtn');
+    const sound = document.getElementById('enterSound');
+
+    enterBtn.addEventListener('click', () => {
+      sound.play().catch(()=>{});
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
